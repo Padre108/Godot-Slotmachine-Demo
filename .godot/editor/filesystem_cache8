@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1737393515
+default_env.tres::Environment::5759198886076254663::1737393415::0::1::::<><>::
+Game.tscn::PackedScene::3338977853458137472::1737393414::0::1::::<><>::uid://bex3yf5s2jtum::::res://Wheel.tscn<>res://Scripts/Player.gd<>res://Scripts/Slotmachine.gd
+README.md::TextFile::-1::1737391810::0::1::::<><>::
+Wheel.tscn::PackedScene::2716399991254962232::1737393415::0::1::::<><>::res://Scripts/Wheel.gd<>uid://ceo85eud8owri::::res://Sprites/Full Sheet.png
+::res://Scripts/::1737393275
+Player.gd::GDScript::-1::1737391912::0::1::::<>Panel<>::
+Slotmachine.gd::GDScript::-1::1737391912::0::1::::<>Panel<>::
+Wheel.gd::GDScript::-1::1737393275::0::1::::<>Control<>::
+::res://Sprites/::1737393083
+Full Sheet.png::CompressedTexture2D::5084555506244079234::1737274788::1737393083::1::::<><>::
+icon.png::CompressedTexture2D::3244275006664420643::1737391810::1737391926::1::::<><>::
+square_nodetails.png::CompressedTexture2D::2081869672538948254::1737391810::1737391926::1::::<><>::

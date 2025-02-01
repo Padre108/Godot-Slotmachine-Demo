@@ -1,7 +1,7 @@
 extends Panel
 
-export var rollCost = 10 
-export var winMultiply = 4
+@export var rollCost = 10 
+@export var winMultiply = 4
 
 var allWheels = []
 var readyWheels = []
@@ -9,7 +9,7 @@ var readyWheels = []
 var lastRolled = []
 
 func register_wheel(newWheel):
-	get_node(newWheel).connect("is_stopped", self, "_on_wheel_is_stopped")
+	get_node(newWheel).connect("is_stopped", Callable(self, "_on_wheel_is_stopped"))
 	
 	
 	randomize_wheel(newWheel)

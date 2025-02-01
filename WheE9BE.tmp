@@ -1,0 +1,129 @@
+[gd_scene load_steps=17 format=3 uid="uid://bex3yf5s2jtum"]
+
+[ext_resource type="Script" path="res://Scripts/Wheel.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://ceo85eud8owri" path="res://Sprites/Full Sheet.png" id="2_xscys"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpnf3"]
+atlas = ExtResource("2_xscys")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oktqx"]
+atlas = ExtResource("2_xscys")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya2mx"]
+atlas = ExtResource("2_xscys")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xerpo"]
+atlas = ExtResource("2_xscys")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a67pf"]
+atlas = ExtResource("2_xscys")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4up2"]
+atlas = ExtResource("2_xscys")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppir2"]
+atlas = ExtResource("2_xscys")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16n0o"]
+atlas = ExtResource("2_xscys")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cequq"]
+atlas = ExtResource("2_xscys")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkuab"]
+atlas = ExtResource("2_xscys")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h63sg"]
+atlas = ExtResource("2_xscys")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw4cf"]
+atlas = ExtResource("2_xscys")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwp4x"]
+atlas = ExtResource("2_xscys")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpnf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oktqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya2mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xerpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a67pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4up2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppir2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16n0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cequq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkuab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h63sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw4cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwp4x")
+}],
+"loop": true,
+"name": &"Rolling",
+"speed": 5.0
+}]
+
+[node name="Wheel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 112.118
+offset_top = 142.635
+offset_right = 112.118
+offset_bottom = 142.635
+script = ExtResource("2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -33.403)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("6")
+animation = &"Rolling"
+frame_progress = 0.476116
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 10.0
+offset_right = 40.2627
+offset_bottom = 40.0
+text = "STOP"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

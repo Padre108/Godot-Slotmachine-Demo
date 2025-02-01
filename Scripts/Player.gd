@@ -1,6 +1,6 @@
 extends Panel
 
-export var start_money = 900
+@export var start_money = 900
 
 var money = start_money
 
